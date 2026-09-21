@@ -1,0 +1,61 @@
+.modal-fondo {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+.modal-contenido {
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 420px;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.boton-cerrar {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+}
+.boton-cerrar:hover { color: #000; }
+
+.modal-contenido h2 {
+  margin: 0 0 16px;
+  color: #5a3e1b;
+  border-bottom: 2px solid #f39c12;
+  padding-bottom: 6px;
+  font-size: 20px;
+}
+
+.info-negocio p,
+.info-disponible p {
+  margin: 10px 0;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.insignia {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.insignia.ocupado { background: #f39c12; color: #fff; }
+.insignia.disponible { background: #2ecc71; color: #fff; }

@@ -1,0 +1,44 @@
+.negocios-container {
+    padding: 20px;
+}
+
+.negocios-container h2 {
+    margin-bottom: 20px;
+}
+
+.negocios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.negocio-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    text-align: center;
+}
+
+.negocio-card:hover {
+    transform: translateY(-5px);
+}
+
+.negocio-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.negocio-card h3 {
+    margin: 10px 0 5px;
+}
+
+.negocio-card p {
+    font-size: 14px;
+    color: #555;
+}

@@ -1,0 +1,614 @@
+/* ============================================
+   CONTENEDOR GENERAL
+============================================ */
+
+.registro-negocio-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.registro-negocio-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-family: Georgia, serif;
+}
+
+/* ============================================
+   TARJETA
+============================================ */
+
+.registro-negocio-card {
+    background: #f4eadc;
+    border: 2px solid #000;
+    border-radius: 24px;
+    padding: 30px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.5s ease;
+}
+
+.registro-negocio-card h1 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.registro-negocio-card p {
+    text-align: center;
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* ============================================
+   SUBTÍTULO Y ESTADOS
+============================================ */
+
+.subtitle {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* ============================================
+   FORMULARIO
+============================================ */
+
+.registro-negocio-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.registro-negocio-card label {
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #000;
+}
+
+.registro-negocio-card label i {
+    color: #f8b94e;
+}
+
+/* ============================================
+   INPUTS
+============================================ */
+
+.registro-negocio-card input,
+.registro-negocio-card textarea {
+    padding: 12px 16px;
+    border: 2px solid #000;
+    border-radius: 12px;
+    font-size: 15px;
+    background: white;
+    color: #333;
+    transition: .3s;
+}
+
+.registro-negocio-card textarea {
+    resize: vertical;
+    min-height: 130px;
+    font-family: inherit;
+}
+
+/* ============================================
+   FOCUS
+============================================ */
+
+.registro-negocio-card input:focus,
+.registro-negocio-card textarea:focus {
+    outline: none;
+    border-color: #f8b94e;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(245, 185, 82, 0.15);
+}
+
+/* ============================================
+   HOVER
+============================================ */
+
+.registro-negocio-card input:hover,
+.registro-negocio-card textarea:hover {
+    border-color: #f8b94e;
+}
+
+/* ============================================
+   SELECT DE PUESTOS
+============================================ */
+
+.stand-select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #000;
+    border-radius: 12px;
+    font-size: 15px;
+    background: white;
+    cursor: pointer;
+    transition: .3s;
+    appearance: none;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+.stand-select:focus {
+    outline: none;
+    border-color: #f8b94e;
+}
+
+.stand-select:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* ============================================
+   MENSAJES DE ESTADO
+============================================ */
+
+.cargando-puestos {
+    text-align: center;
+    font-weight: bold;
+    color: #c88d19;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+.sin-puestos {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    padding: 10px;
+    background: #fde8e8;
+    border-radius: 6px;
+    text-align: center;
+    border: 2px solid #e74c3c;
+}
+
+/* ============================================
+   ÁREA DEL LOGO
+============================================ */
+
+.logo-upload {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border: 3px dashed #f8b94e;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fffdf9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    padding: 15px;
+}
+
+.logo-upload:hover {
+    background: #fff8eb;
+    border-color: #e8a935;
+    transform: translateY(-2px);
+}
+
+.logo-icon {
+    font-size: 60px;
+    margin-bottom: 5px;
+}
+
+.logo-upload p {
+    font-size: 13px;
+    color: #444;
+    margin: 0 0 4px 0 !important;
+    font-weight: 600;
+}
+
+.logo-upload small {
+    font-size: 11px;
+    color: #777;
+    margin: 0;
+}
+
+.logo-upload span {
+    font-size: 14px;
+    color: #555;
+}
+
+.preview-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* ============================================
+   MENSAJE SUBIENDO
+============================================ */
+
+.uploading {
+    text-align: center;
+    font-weight: 600;
+    color: #c88d19;
+    font-size: 14px;
+}
+
+/* ============================================
+   BOTÓN CAMBIAR LOGO
+============================================ */
+
+.btn-eliminar-logo {
+    background: #fff;
+    border: 2px solid #ff6b6b;
+    border-radius: 25px;
+    padding: 10px 16px;
+    color: #ff6b6b;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.btn-eliminar-logo:hover {
+    background: #ff6b6b;
+    color: #fff;
+    transform: scale(1.03);
+}
+
+/* ============================================
+   MAPA INTERACTIVO PARA SELECCIÓN DE PUESTO
+============================================ */
+
+.stand-map-preview {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff8eb;
+    border-radius: 16px;
+    border: 2px solid #f8b94e;
+}
+
+.stand-map-preview h4 {
+    margin: 0 0 5px 0;
+    color: #2c3e50;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.stand-map-preview h4 i {
+    color: #f8b94e;
+}
+
+.map-hint {
+    color: #7f8c8d;
+    font-size: 0.8rem;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.mini-map {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background: #e8e0d4;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #000;
+}
+
+/* ============================================
+   MARCADORES DE PUESTOS
+============================================ */
+
+.stand-selector {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid #2ecc71;
+    background: rgba(46, 204, 113, 0.3);
+    color: #2c3e50;
+    font-size: 0.55rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.stand-selector:hover {
+    transform: translate(-50%, -50%) scale(1.3);
+    background: rgba(46, 204, 113, 0.6);
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(46, 204, 113, 0.4);
+}
+
+.stand-selector.selected {
+    background: #f8b94e;
+    border-color: #000;
+    color: #000;
+    transform: translate(-50%, -50%) scale(1.4);
+    box-shadow: 0 0 20px rgba(248, 185, 78, 0.6);
+    z-index: 20;
+    animation: pulse-selected 1.5s ease-in-out infinite;
+    font-weight: 900;
+}
+
+@keyframes pulse-selected {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(248, 185, 78, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(248, 185, 78, 0.8);
+    }
+}
+
+/* ============================================
+   LEYENDA DEL MAPA
+============================================ */
+
+.map-legend-mini {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #000;
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.legend-dot.available {
+    background: #2ecc71;
+}
+
+/* ============================================
+   MENSAJE REGISTRANDO
+============================================ */
+
+.registrando-mensaje {
+    margin-top: 10px;
+    color: #c88d19;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ============================================
+   BOTÓN ENVIAR
+============================================ */
+
+.btn-registrar {
+    background: #f8b94e;
+    border: 2px solid #000;
+    border-radius: 25px;
+    padding: 14px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #111;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-registrar:hover:not(:disabled) {
+    background: #e6a73a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(248, 185, 78, 0.35);
+}
+
+.btn-registrar:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ============================================
+   RESPONSIVE - TABLET
+============================================ */
+
+@media (max-width: 768px) {
+
+    .registro-negocio-container {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .registro-negocio-card {
+        padding: 25px 20px;
+    }
+
+    .logo-upload {
+        width: 150px;
+        height: 150px;
+    }
+
+    .logo-icon {
+        font-size: 40px;
+    }
+
+    .mini-map {
+        height: 250px;
+    }
+
+    .stand-selector {
+        width: 22px;
+        height: 22px;
+        font-size: 0.45rem;
+    }
+
+    .stand-selector.selected {
+        transform: translate(-50%, -50%) scale(1.3);
+    }
+
+    .registro-negocio-card h1 {
+        font-size: 1.5rem;
+    }
+
+    .registro-negocio-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - CELULAR
+============================================ */
+
+@media (max-width: 480px) {
+
+    .registro-negocio-container {
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    .registro-negocio-card {
+        padding: 15px;
+        border-radius: 16px;
+    }
+
+    .mini-map {
+        height: 200px;
+    }
+
+    .stand-selector {
+        width: 18px;
+        height: 18px;
+        font-size: 0.4rem;
+        border-width: 1.5px;
+    }
+
+    .stand-selector.selected {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    .map-legend-mini {
+        font-size: 0.55rem;
+        padding: 4px 8px;
+    }
+
+    .stand-map-preview h4 {
+        font-size: 0.85rem;
+    }
+
+    .logo-upload {
+        width: 120px;
+        height: 120px;
+    }
+
+    .logo-icon {
+        font-size: 30px;
+    }
+
+    .registro-negocio-card input,
+    .registro-negocio-card textarea,
+    .stand-select {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+
+    .btn-registrar {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .registro-negocio-card h1 {
+        font-size: 1.2rem;
+    }
+}
+
+/* ============================================
+   ANIMACIONES ADICIONALES
+============================================ */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   MEJORAS VISUALES PARA EL MAPA MINI
+============================================ */
+
+.mini-map::before {
+    content: "🗺️ Mapa del Mercado";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.85);
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #2c3e50;
+    border: 1px solid #000;
+    z-index: 5;
+    white-space: nowrap;
+}
+
+/* Líneas de cuadrícula en el mini mapa */
+
+.mini-map::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.05) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.05) 1px,
+            transparent 1px
+        );
+
+    background-size: 20px 20px;
+
+    pointer-events: none;
+    z-index: 1;
+}
